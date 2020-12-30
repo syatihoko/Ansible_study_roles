@@ -1,0 +1,34 @@
+---
+  #1.Ставим Java на все хосты
+  - name: Install Java
+    hosts: all
+    tasks:  
+      - name: "Include java-role"
+        include_role:
+          name: "java-role"
+
+  #2.Следующий Play установки Elasticsearch
+  - name: Install Elasticsearch
+    hosts: elasticsearch
+    tasks:
+      - name: "Include elastic-role"
+        include_role:
+          name: "elastic-role"
+
+  #3.Следующий Play установки Kibana
+  - name: Install Kibana
+    hosts: kibana
+    tasks:
+      - name: "Include kibana-role"
+        include_role:
+          name: "kibana-role"
+        
+        
+  #4.Play установки Logstash
+  - name: Install Logstash
+    hosts: logstash
+    tasks:
+      - name: "Include logstash-role"
+        include_role:    
+          name: logstash-role
+

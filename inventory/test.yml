@@ -1,0 +1,13 @@
+---
+#группа elasticsearch
+  elasticsearch:
+    hosts:
+    #это на самом деле проброшенный ssh на вирт. машину.
+      elk_elasticsearch_1:
+        ansible_connection: docker
+        ansible_user: root
+  kibana:
+    hosts:
+      elk_kibana_1:
+        ansible_connection: docker
+        ansible_user: root
