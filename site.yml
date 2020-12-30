@@ -1,5 +1,5 @@
 ---
-  #1.Ставим Java на все хосты
+  #1.Ставим Java на все хосты.
   - name: Install Java
     hosts: all
     tasks:  
